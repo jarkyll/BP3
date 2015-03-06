@@ -41,6 +41,9 @@ public class Example {
 			//test case
 			Iterator iterate = mainArray.iterator();
 			// go through each big set
+			int closed= 0;
+			int open = 0;
+			//number of open and closed cases 
 			while(iterate.hasNext()){
 				JSONObject arrayObject = (JSONObject) iterate.next();
 				// goes to each big element in JSON
@@ -51,24 +54,27 @@ public class Example {
 				// 2014-10-06T23:32:33Z
 				// read start and end to get the date
 				// read what is opened and what is closed on that date
-				String example = "2014-10-06";
+				String example = "2015-02-22";
 				//String[] parts = example.split("-");
 				String case1Start = (String) arrayObject.get(START);
 				// fetch start date
 				String case1End = (String) arrayObject.get(END);
 				//fetch end date
-			//	int closed= 0;
-		//		int open = 0;
-	//			if(case1Start.contains(example) )
+				//check first if case1Start and case1End are not null
+				
+				if(case1Start!=null && case1Start.contains(example) )
 					//the task started on the date
-		//			open++;
+					open++;
 				// it can start then
 				// * rewrite later to include next day case
-		//		else if(case1End.contains(example) )
-		//			closed++;
-				
-				System.out.println("start " + case1Start );
-				System.out.println("end " + case1End);
+				else if(case1End != null && case1End.contains(example) )
+					closed++;
+
+				System.out.println(case1Start);
+				System.out.println(case1End);
+				System.out.println(example);
+				System.out.println("number of open cases: " + open );
+				System.out.println("number of closed cases: " + closed);
 				System.out.println("next");
 				
 			}
