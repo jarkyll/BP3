@@ -57,8 +57,20 @@ public class Example {
 				// fetch start date
 				String case1End = (String) arrayObject.get(END);
 				//fetch end date
-				System.out.println("this is the name " + END );
-				System.out.println("hello");				
+				int closed= 0;
+				int open = 0;
+				if(case1Start.contains(example) )
+					//the task started on the date
+					open++;
+				// it can start then
+				// * rewrite later to include next day case
+				else if(case1End.contains(example) )
+					closed++;
+				
+				System.out.println("number of closed cases" + closed );
+				System.out.println("number of open cases" + open);
+				System.out.println("next");
+				
 			}
 			
 			
