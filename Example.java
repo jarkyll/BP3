@@ -1,20 +1,21 @@
-//package com.javacodegeeks.javabasics.jsonparsertest;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Iterator;
 
+
+// Utilized JSON simple because it is free
+// and it would parse through the JSON file
+// as that is the input
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public class Example {
-	
-	 
-	    
-	private static final String filePath = "C:\\Users\\Nabeel\\Documents\\task.json";
+		    
+	private static final String filePath = "C:\\Users\\Nabeel\\Documents\\task.json";//change the file name to other parsers
 	
 	public static void main(String[] args) {
 
