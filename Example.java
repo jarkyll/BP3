@@ -70,14 +70,13 @@ public class Example {
 				else if(case1End != null && case1End.contains(example) )
 					closed++;
 
-				System.out.println(case1Start);
-				System.out.println(case1End);
-				System.out.println(example);
-				System.out.println("number of open cases: " + open );
-				System.out.println("number of closed cases: " + closed);
-				System.out.println("next");
-				
+				//System.out.println(case1Start);
+				//System.out.println(case1End);
+				//System.out.println(example);
 			}
+			System.out.println("number of open cases: " + open );
+			System.out.println("number of closed cases: " + closed);
+			System.out.println("total: " + (open + closed) );
 			
 			
 		} catch (FileNotFoundException ex) {
