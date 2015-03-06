@@ -43,8 +43,14 @@ public class Example {
 			// go through each big set
 			while(iterate.hasNext()){
 				JSONObject arrayObject = (JSONObject) iterate.next();
-				System.out.println("this is the name " + arrayObject.get("instanceName"));
-				System.out.println("hello");
+				// goes to each big element in JSON
+				// from that we read the input and spit out the answer
+				// case 1
+				//since arrayObject.get spits out an object instanceName
+				//
+				String case1 = (String) arrayObject.get(INSTANCENAME);
+				System.out.println("this is the name " + case1 );
+				System.out.println("hello");				
 			}
 			
 			
