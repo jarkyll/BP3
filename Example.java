@@ -17,6 +17,18 @@ public class Example {
 		    
 	private static final String filePath = "C:\\Users\\Nabeel\\Documents\\task.json";//change the file name to other parsers
 	
+	private static final String INSTANCENAME = "instanceName";
+	
+	private static final String NAME = "name";
+	
+	private static final String INSTANCEID = "instanceId";
+	
+	private static final String STATUS = "status";
+	
+	private static final String START = "startDate";
+	
+	private static final String END = "closeDate";
+	
 	public static void main(String[] args) {
 
 		try {
