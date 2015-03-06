@@ -47,9 +47,17 @@ public class Example {
 				// from that we read the input and spit out the answer
 				// case 1
 				//since arrayObject.get spits out an object instanceName
-				//
-				String case1 = (String) arrayObject.get(INSTANCENAME);
-				System.out.println("this is the name " + case1 );
+				// we give it the date in the way I am assuming
+				// 2014-10-06T23:32:33Z
+				// read start and end to get the date
+				// read what is opened and what is closed on that date
+				String example = "2014-10-06";
+				//String[] parts = example.split("-");
+				String case1Start = (String) arrayObject.get(START);
+				// fetch start date
+				String case1End = (String) arrayObject.get(END);
+				//fetch end date
+				System.out.println("this is the name " + END );
 				System.out.println("hello");				
 			}
 			
