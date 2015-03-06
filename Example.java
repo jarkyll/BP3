@@ -25,6 +25,16 @@ public class Example {
 			//  it is an array so we read the array
 			JSONArray mainArray = (JSONArray) jsonParser.parse(reader);
 			
+			//test case
+			Iterator iterate = mainArray.iterator();
+			// go through each big set
+			while(iterate.hasNext()){
+				JSONObject arrayObject = (JSONObject) iterate.next();
+				System.out.println("this is the name " + arrayObject.get("instanceName"));
+				System.out.println("hello");
+			}
+			
+			
 		} catch (FileNotFoundException ex) {
 			ex.printStackTrace();
 		} catch (IOException ex) {
