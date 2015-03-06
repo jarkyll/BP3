@@ -78,15 +78,11 @@ public class Example {
 			System.out.println("number of closed cases: " + closed);
 			System.out.println("total: " + (open + closed) );
 			
-//CASE 2
+//CASE 3
 
-			Iterator iterate = mainArray.iterator();
 			// go through each big set
-			int numTasks = 0;
-			// Start example
-			String sexample = "2015-02-22";
-			// end example
-			String eexample = "2023-2323-2323";
+			// instanceId example
+			String example = "2015-02-22";
 			
 			//number of tasks opened and closed in that range
 			while(iterate.hasNext()){
@@ -97,11 +93,51 @@ public class Example {
 				// hours then minutes then secs
 				// add if it passes the task
 				// 
-				String case1Start = (String) arrayObject.get(START);
-				// fetch start date
-				String case1End = (String) arrayObject.get(END);
-				//fetch end date
-				//check first if case1Start and case1End are not null
+				String  = (String) arrayObject.get(START);
+				// fetch when started
+				// add the first open as the most recent because one didnt exist previously
+				// check if it is closer to the date
+				// day
+				// 	hour
+				// 		minute
+				//			sec
+				// if passes all then replace temp with this one cause it's closer
+				//
+				if(case1Start!=null && case1Start.contains(example) )
+					//the task started on the date
+					open++;
+				// it can start then
+				// * rewrite later to include next day case
+				else if(case1End != null && case1End.contains(example) )
+					closed++;
+
+				//System.out.println(case1Start);
+				//System.out.println(case1End);
+				//System.out.println(example);
+			}
+			System.out.println("number of open cases: " + open );
+			System.out.println("number of closed cases: " + closed);
+			System.out.println("total: " + (open + closed) );
+
+
+//CASE 4
+
+			// go through each big set
+			// instanceId example
+			String example = "680";
+			
+			//number of tasks opened and closed in that range
+			while(iterate.hasNext()){
+				JSONObject arrayObject = (JSONObject) iterate.next();
+				//String[] parts = example.split("-");
+				//compare if it is in that open or close day
+				//then check if in that time frame
+				// hours then minutes then secs
+				// add if it passes the task
+				// 
+				String instanceId = (String) arrayObject.get(INSTANCEID);
+				//check how many times this appears
+				//
 				
 				if(case1Start!=null && case1Start.contains(example) )
 					//the task started on the date
@@ -118,6 +154,8 @@ public class Example {
 			System.out.println("number of open cases: " + open );
 			System.out.println("number of closed cases: " + closed);
 			System.out.println("total: " + (open + closed) );
+
+
 		
 			
 		} catch (FileNotFoundException ex) {
