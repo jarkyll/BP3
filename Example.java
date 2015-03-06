@@ -25,7 +25,7 @@ public class Example {
 	
 	private static final String STATUS = "status";
 	
-	private static final String START = "startDate";
+	private static final String START = "createDate";
 	
 	private static final String END = "closeDate";
 	
@@ -57,18 +57,18 @@ public class Example {
 				// fetch start date
 				String case1End = (String) arrayObject.get(END);
 				//fetch end date
-				int closed= 0;
-				int open = 0;
-				if(case1Start.contains(example) )
+			//	int closed= 0;
+		//		int open = 0;
+	//			if(case1Start.contains(example) )
 					//the task started on the date
-					open++;
+		//			open++;
 				// it can start then
 				// * rewrite later to include next day case
-				else if(case1End.contains(example) )
-					closed++;
+		//		else if(case1End.contains(example) )
+		//			closed++;
 				
-				System.out.println("number of closed cases" + closed );
-				System.out.println("number of open cases" + open);
+				System.out.println("start " + case1Start );
+				System.out.println("end " + case1End);
 				System.out.println("next");
 				
 			}
